@@ -5,7 +5,7 @@ export default function PageHero({ eyebrow, title, description, ctaHref = "/book
   return (
     <section className="relative isolate overflow-hidden pb-20 pt-36 sm:pb-24 sm:pt-40">
       <div className="absolute inset-0 -z-20">
-        <img src={asset("/images/hero-bg.jpg")} alt="Restaurant background" className="h-full w-full object-cover opacity-25" />
+        <img src={asset("images/hero-bg.jpg")} alt="Restaurant background" className="h-full w-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/88 to-ink" />
       </div>
       <div className="container-premium">

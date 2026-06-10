@@ -45,7 +45,7 @@ export default function Navigation() {
       >
         <Link href="/" className="group flex items-center gap-3">
           <span className="grid h-11 w-11 place-items-center rounded-full bg-saffron text-lg font-black text-ink shadow-glow transition-transform duration-300 group-hover:scale-105">
-            <img className="h-5 w-5" src={asset("/images/favicon.png")} alt="" />
+            <img className="h-5 w-5" src={asset("images/favicon.png")} alt="" />
           </span>
           <span className="leading-none">
             <span className="block font-display text-2xl text-cream">{brand.name}</span>

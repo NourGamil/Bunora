@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section className="relative isolate min-h-screen overflow-hidden pt-32 sm:pt-36 lg:pt-40">
       <div className="absolute inset-0 -z-30">
-        <img src={asset("/images/hero-bg.jpg")} alt="Premium burger restaurant" className="h-full w-full object-cover opacity-32" />
+        <img src={asset("images/hero-bg.jpg")} alt="Premium burger restaurant" className="h-full w-full object-cover opacity-32" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(246,178,60,0.22),transparent_26rem),linear-gradient(110deg,rgba(9,8,6,0.98)_0%,rgba(9,8,6,0.82)_42%,rgba(9,8,6,0.52)_100%)]" />
       </div>
       <div className="absolute inset-0 -z-20 hero-grid opacity-35 mask-soft-bottom" />

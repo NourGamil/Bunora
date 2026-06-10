@@ -12,7 +12,7 @@ export default function AboutSection({ standalone = false }) {
         <div data-reveal className="relative mx-auto max-w-md lg:mx-0">
           <div className="absolute -inset-6 rounded-[3rem] border border-ink/10" />
           <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-ink to-charcoal p-8 shadow-premium">
-            <img data-parallax src={asset("/images/about-img.png")} alt="Bunora chef plate" className="mx-auto max-h-[34rem] w-auto drop-shadow-[0_38px_42px_rgba(0,0,0,0.45)]" />
+            <img data-parallax src={asset("images/about-img.png")} alt="Bunora chef plate" className="mx-auto max-h-[34rem] w-auto drop-shadow-[0_38px_42px_rgba(0,0,0,0.45)]" />
             <div className="absolute bottom-6 left-6 right-6 rounded-[1.75rem] border border-white/10 bg-white/[0.08] p-4 text-cream backdrop-blur-xl">
               <p className="text-xs uppercase tracking-[0.28em] text-saffron">Kitchen note</p>
               <p className="mt-2 font-display text-2xl">Built for flavor, staged for elegance.</p>

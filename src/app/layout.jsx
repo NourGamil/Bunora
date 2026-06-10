@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Premium burgers, pizza, pasta, and comfort food served with a polished dining experience.",
   icons: {
-    icon: asset("/images/favicon.png")
+    icon: asset("images/favicon.png")
   }
 };
 

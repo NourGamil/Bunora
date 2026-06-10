@@ -19,7 +19,9 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
           <div data-reveal>
             <Link href="/" className="inline-flex items-center gap-3">
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-saffron text-xl font-black text-ink shadow-glow">B</span>
+              <span className="grid h-12 w-12 place-items-center rounded-full bg-saffron text-xl font-black text-ink shadow-glow">
+                <img className="h-5 w-5" src="images/favicon.png" alt="" />
+              </span>
               <span className="font-display text-3xl text-cream">{brand.name}</span>
             </Link>
             <p className="mt-5 max-w-md text-sm leading-7 text-cream/58">
@@ -59,7 +61,17 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-cream/40 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
-          <p>Made for good food, warm nights, and golden cravings.</p>
+                    <a
+          href="https://nourgamil.github.io/Main-Portfolio/"
+          target="_blank"
+          rel="noreferrer"
+          className="flex justify-center items-center gap-[20px]"
+          >
+            <span className="">Copyright © 2026 Nour</span>
+            <div className="flex max-sm:h-[44px] max-sm:w-[44px] h-[54px] w-[54px] items-center justify-center rounded-full border border-[white]/50 bg-[white]/[0.5] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:scale-110 hover:border-[#fdc700]/40 hover:shadow-[0_18px_45px_rgba(253,199,0,0.12)]">
+              <img className="max-sm:h-[24px] max-sm:w-[24px] h-[34px] w-[34px]" src="images/favicon.ico" alt="" />
+            </div>
+          </a>
         </div>
       </div>
     </footer>

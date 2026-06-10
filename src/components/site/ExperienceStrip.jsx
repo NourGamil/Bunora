@@ -11,7 +11,7 @@ export default function ExperienceStrip() {
     <section className="relative overflow-hidden border-y border-white/10 bg-white/[0.03] py-12">
       <div className="container-premium grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
         <div data-reveal className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-3">
-          <img src={asset("/images/f5.png")} alt="Golden fries" className="mx-auto max-h-56 w-auto object-contain drop-shadow-[0_24px_30px_rgba(0,0,0,0.35)]" />
+          <img src={asset("images/f5.png")} alt="Golden fries" className="mx-auto max-h-56 w-auto object-contain drop-shadow-[0_24px_30px_rgba(0,0,0,0.35)]" />
         </div>
         <div data-stagger className="grid gap-4 sm:grid-cols-3">
           {steps.map((step, index) => (
