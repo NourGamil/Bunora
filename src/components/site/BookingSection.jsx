@@ -41,7 +41,7 @@ export default function BookingSection({ compact = false }) {
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="grid gap-2 text-sm font-medium text-cream/70">
                 Your name
-                <input className="rounded-2xl border-white/10 bg-white/[0.06] px-4 py-4 text-cream outline-none transition focus:border-saffron focus:ring-saffron/30" placeholder="Amir" />
+                <input className="rounded-2xl border-white/10 bg-white/[0.06] px-4 py-4 text-cream outline-none transition focus:border-saffron focus:ring-saffron/30" placeholder="Name" />
               </label>
               <label className="grid gap-2 text-sm font-medium text-cream/70">
                 Phone number
