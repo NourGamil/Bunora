@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-ink: #090806;
+  --color-charcoal: #15110d;
+  --color-cream: #fff8ea;
+  --color-latte: #f8ead2;
+  --color-saffron: #f6b23c;
+  --color-ember: #ff7a2f;
+  --color-copper: #b9692f;
+  --shadow-premium: 0 30px 90px rgba(0, 0, 0, 0.24);
+  --shadow-glow: 0 24px 80px rgba(246, 178, 60, 0.35);
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-marquee: marquee 24s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+:root {
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #090806;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(246, 178, 60, 0.16), transparent 32rem),
+    radial-gradient(circle at 85% 8%, rgba(255, 122, 47, 0.12), transparent 28rem),
+    #090806;
+  color: #fff8ea;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  color: #090806;
+  background: #f6b23c;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+@layer base {
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply text-cream placeholder:text-cream/40;
+  }
+}
+
+@layer components {
+  .container-premium {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .glass-panel {
+    @apply border border-white/10 bg-white/[0.06] shadow-premium backdrop-blur-2xl;
+  }
+
+  .premium-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.24em] transition-all duration-300;
+  }
+
+  .premium-button-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-saffron px-6 py-3 text-sm font-semibold uppercase tracking-[0.24em] text-ink shadow-glow transition-all duration-300 hover:-translate-y-1 hover:bg-amber-300;
+  }
+
+  .premium-button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-6 py-3 text-sm font-semibold uppercase tracking-[0.24em] text-cream transition-all duration-300 hover:-translate-y-1 hover:border-saffron/60 hover:bg-white/[0.1];
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-24 lg:py-32;
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.42em] text-saffron;
+  }
+
+  .section-title {
+    @apply mt-4 font-display text-4xl leading-tight text-cream sm:text-5xl lg:text-6xl;
+  }
+
+  .section-copy {
+    @apply mt-5 max-w-2xl text-base leading-8 text-cream/65 sm:text-lg;
+  }
+
+  .spotlight-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spotlight-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+    background: radial-gradient(
+      420px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(246, 178, 60, 0.18),
+      transparent 40%
+    );
+  }
+
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-soft-bottom {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.marquee-track {
+  width: max-content;
+}
+
+.reveal-line {
+  overflow: hidden;
+}
+
+.reveal-line > span {
+  display: inline-block;
+}
